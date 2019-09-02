@@ -1,0 +1,36 @@
+{% extends 'base/master.html'%}
+{% block 'title'%} Signup {%endblock%}
+{% block 'content' %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>Signup </h4>
+                <form method="post" action="{%  url 'signup' %}">
+                    {% csrf_token %}
+            <input type="text" name="username" class="form-control input-sm chat-input" placeholder="username" />
+            </br>
+            <input type="password" name="password1" class="form-control input-sm chat-input" placeholder="password" />
+            </br>
+                <input type="password" name="password2" class="form-control input-sm chat-input" placeholder="confirm password" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">
+              <button type="submit" class="btn btn-primary btn-md" style="width: 100%;">Save</button>
+            </span>
+            </div>
+                     <div class="wrapper">
+
+                    <div class="form-group">
+
+                <a href="{% url 'login' %}" style="width: 100%;"> Are you  employee? </a>
+            </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+{%endblock%}

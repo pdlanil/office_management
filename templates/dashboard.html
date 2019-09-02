@@ -1,0 +1,34 @@
+{% extends 'base/master.html'%}
+{% load staticfiles %}
+{% block 'title' %} Dashboard {%endblock%}
+{% block 'content' %}
+
+<div class="row">
+    <div class="col-md-4" style="height: 20%; width: 20%;">
+        <img src="{% static 'img/leave.png'  %}" class="exp-img">
+        <a  href="{% url 'leave' %}"  class="exp-text">
+            <h4>Request Leave</h4>
+        </a>
+    </div>
+    <div class="col-md-4" style="height: 20%; width: 20%;">
+        <img src="{% static 'img/attendance.jpeg'  %}" class="exp-img">
+        <a  href="{% url 'attendance' %}"  class="exp-text">
+            <h4>Attendance</h4>
+        </a>
+    </div>
+    <div class="col-md-4" style="height: 20%;width: 20%">
+        <img src="{% static 'img/task.jpg'  %}" class="exp-img">
+        <a  href="{% url 'task' %}"  class="exp-text">
+            <h4>Assign Task</h4>
+        </a>
+    </div>
+    <div class="col-md-4" style="height: 20%;width: 20%;">
+        <img src="{% static 'img/employee.jpg'  %}" class="exp-img">
+        <a  href="{% url 'employee' %}"  class="exp-text">
+            <h4>Add a Employee</h4>
+        </a>
+    </div>
+</div>
+
+
+{%endblock%}
